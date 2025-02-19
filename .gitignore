@@ -1,0 +1,4 @@
+**/secrets.h
+.tox
+docs/build
+docs/doxygen
