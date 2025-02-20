@@ -7,5 +7,5 @@ This repo consists of utilities meant to help with the development of a custom s
 
 |  |  |
 |--------------|-------------|
-| <img src="docs/_static/gm_logo.png" alt="GM Logo" width="400"/>   |  **[Docs](https://gregmolskow.github.io/SmartHomeUtils/)** <br> Comprehensive documentation and API details for this project can be found here.  |
+| <img src="docs/_static/gm_logo.png" alt="GM Logo" width="100"/>   |  **[Docs](https://gregmolskow.github.io/SmartHomeUtils/)** <br> Comprehensive documentation and API details for this project can be found here.  |
 
