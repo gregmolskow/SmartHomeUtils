@@ -2,8 +2,6 @@ name: Build Python Wheel
 
 on:
   push:
-    tags:
-      - 'v*'  # Only run on version tag pushes, e.g., v1.0.0
 
 jobs:
   build-wheel:
