@@ -2,6 +2,8 @@ name: Build Python Wheel
 
 on:
   push:
+    tags:
+      - 'v*'  # Only run on version tag pushes, e.g., v1.0.0
 
 jobs:
   build-wheel:
@@ -25,8 +27,9 @@ jobs:
       - name: Build wheel
         run: uv build
 
-      - name: Upload wheel artifact
-        uses: actions/upload-artifact@v4
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: python-wheel
-          path: dist/*.whl
+          files: dist/*.whl
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
