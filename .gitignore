@@ -5,3 +5,4 @@ docs/doxygen
 .vscode
 .venv
 dist
+build
