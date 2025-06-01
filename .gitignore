@@ -2,3 +2,5 @@
 .tox
 docs/build
 docs/doxygen
+.vscode
+.venv
