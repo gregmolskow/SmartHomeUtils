@@ -2,8 +2,6 @@ name: Build and Upload Sphinx Docs
 
 on:
   push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -48,7 +46,7 @@ jobs:
     permissions:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
-      content: read
+      contents: read
 
     # Deploy to the github-pages environment
     environment:
