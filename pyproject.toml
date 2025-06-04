@@ -1,5 +1,5 @@
 [project]
-name = "GMSmartHomeDevice"
+name = "OpenSourceSmartDevice"
 authors = [
     { name = "Greg Molskow"}
 ]
