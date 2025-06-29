@@ -4,7 +4,7 @@ This module provides a basic MQTT client implementation using the Paho MQTT libr
 """
 
 import paho.mqtt.client as mqtt
-from paho.mqtt.client import MQTTMessage, MQTTMessageInfo
+from paho.mqtt.client import MQTTMessageInfo
 
 class MQTTClient:
     """
