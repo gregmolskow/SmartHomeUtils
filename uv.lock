@@ -8,14 +8,19 @@ version = "0.1"
 source = { editable = "." }
 dependencies = [
     { name = "paho-mqtt" },
+]
+
+[package.optional-dependencies]
+build = [
     { name = "uv-build" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "paho-mqtt", specifier = ">=2.1.0" },
-    { name = "uv-build", specifier = ">=0.7.9" },
+    { name = "paho-mqtt" },
+    { name = "uv-build", marker = "extra == 'build'", specifier = ">=0.7.9" },
 ]
+provides-extras = ["build"]
 
 [[package]]
 name = "paho-mqtt"
