@@ -18,6 +18,7 @@ To start, make sure that a gcc compiler is installed on your system. This librar
    :caption: Contents:
 
    GMSmartHomeDevice/index
+   opensourcesmartdevice/index
 
 .. Indices and tables
 .. ==================
