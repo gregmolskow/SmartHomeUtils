@@ -1,7 +1,7 @@
 name: Build and Upload Sphinx Docs
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
