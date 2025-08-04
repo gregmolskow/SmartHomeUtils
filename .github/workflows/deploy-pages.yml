@@ -42,7 +42,7 @@ jobs:
         path: docs/build
 
   deploy-pages:
-
+    needs: build-pages
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      # to deploy to Pages
@@ -57,7 +57,11 @@ jobs:
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
-
+      - name: Download documentation artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
