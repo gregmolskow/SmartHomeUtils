@@ -12,31 +12,30 @@ jobs:
       contents: read
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      # with:
-      #   python-version: '3.8'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        # with:
+        #   python-version: '3.8'
 
-    - name: Setup Python environment
-      run: |
-        python -m pip install --upgrade pip
-        pip install uv
-        uv sync --all-extras
+      - name: Setup Python environment
+        run: |
+          python -m pip install --upgrade pip
+          pip install uv
+          uv sync --all-extras
 
-    - name: Install Doxygen
-      run: sudo apt-get install -y doxygen
+      - name: Install Doxygen
+        run: sudo apt-get install -y doxygen
 
-    - name: Build documentation
-      run: |
-        source .venv/bin/activate
-        tox -e docs
-        
+      - name: Build documentation
+        run: |
+          source .venv/bin/activate
+          tox -e docs
 
-    - name: Upload documentation artifacts
-      uses: actions/upload-pages-artifact@v3
-      with:
-        name: github-pages
-        path: docs/build
+      - name: Upload documentation artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages
+          path: docs/build
